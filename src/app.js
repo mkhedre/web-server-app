@@ -41,7 +41,7 @@ app.use(express.static(constdirfile))
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title : 'weather app',
+        title : 'Weather app',
         name : 'mostafa'
     })
 })
@@ -50,7 +50,7 @@ app.get('/help',(req,res)=>{
     res.render('help',{
         message:'please help me',
         title :'help',
-        name:'ahmed'
+        name:'mostafa'
     })
 })
 app.get('/help/*',(req,res)=>{
@@ -60,13 +60,13 @@ app.get('/help/*',(req,res)=>{
         message:'help article not found'
     })
 })
-app.get('/help',(req,res)=>{
-    res.render('error',{
-        title : '404',
-        name : 'mostafa',
-        message:'404 not found'
-    })
-})
+// app.get('*',(req,res)=>{
+//     res.render('error',{
+//         title : '404',
+//         name : 'mostafa',
+//         message:'404 not found'
+//     })
+// })
 app.get('/products',(req,res)=>{
     if(!req.query.search){
         return res.send({
