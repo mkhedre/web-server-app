@@ -8,7 +8,7 @@ const forecast =(latitude,longitude , callback)=>{
             callback('cant find this weather , try again',undefined)
         }else{
             callback(undefined, 
-                `its currently ${body.current.temperature} degrees out ,humidity equal ${body.current.humidity} and there is a ${body.current.precip}% chance of a rain .`    
+                `it seems ${body.current.weather_descriptions[0]} and currently its ${body.current.temperature} degrees out ,humidity equal ${body.current.humidity} and there is a ${body.current.precip}% chance of a rain .`    
             )
         }
     })
